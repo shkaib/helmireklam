@@ -1,0 +1,42 @@
+# GLOBAL
+# ======
+# Directories Index protection
+Options -Indexes
+
+# Default Apache rules
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews
+    </IfModule>
+
+    RewriteEngine On
+
+    # Redirect Trailing Slashes If Not A Folder...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+    # Handle Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+
+    # Handle Authorization Header
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+</IfModule>
+
+# Robots.txt
+# ==========
+# Remove HTTPS pages from Google. Please disable the line 31 to 33 for using HTTPS
+RewriteCond %{HTTPS} ^on$
+RewriteCond %{REQUEST_URI} ^/robots.txt$
+RewriteRule ^(.*)$ /robots.https.txt [L]
+# Normal pages go to robots controller
+RewriteRule  ^(robots\.txt)$ /robots [NC,L]
+
+# Iframe call
+# ===========
+<IfModule mod_headers.c>
+# Unset X-Frame-Options
+Header unset X-Frame-Options
+</IfModule>

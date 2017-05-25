@@ -1,0 +1,6 @@
+[27-Nov-2016 06:13:10 UTC] PHP Fatal error:  Call to a member function count() on null in /home/alealaniah123/public_html/projects/waseet/app/Http/Controllers/SitemapController.php on line 34
+[27-Nov-2016 06:13:11 UTC] PHP Fatal error:  Call to a member function count() on null in /home/alealaniah123/public_html/projects/waseet/app/Http/Controllers/SitemapController.php on line 34
+[27-Nov-2016 06:13:14 UTC] PHP Fatal error:  Call to a member function count() on null in /home/alealaniah123/public_html/projects/waseet/app/Http/Controllers/SitemapController.php on line 34
+[27-Nov-2016 07:11:31 UTC] PHP Fatal error:  Call to a member function count() on null in /home/alealaniah123/public_html/projects/waseet/app/Http/Controllers/SitemapController.php on line 34
+[27-Nov-2016 07:11:33 UTC] PHP Fatal error:  Call to a member function count() on null in /home/alealaniah123/public_html/projects/waseet/app/Http/Controllers/SitemapController.php on line 34
+[27-Nov-2016 21:26:31 UTC] PHP Fatal error:  Call to a member function count() on null in /home/alealaniah123/public_html/projects/waseet/app/Http/Controllers/SitemapController.php on line 34
